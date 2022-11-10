@@ -16,28 +16,28 @@
 
     <form id="frm1" name="frm1" method="POST" action="/vote">
         <p>First choice for SplateFest Team:</p>
-        <input type="radio" id="fire1" name="first" value="fire">
+        <input type="radio" id="fire1" name="rank1" value="fire">
         <label for="fire1">Fire</label><br>
-        <input type="radio" id="grass1" name="first" value="grass">
+        <input type="radio" id="grass1" name="rank1" value="grass">
         <label for="grass1">Grass</label><br>
-        <input type="radio" id="water1" name="first" value="water">
+        <input type="radio" id="water1" name="rank1" value="water">
         <label for="water1">Water</label><br>
 
 
         <p>Second choice for splatfest Team:</p>
-        <input type="radio" id="fire2" name="second" value="fire">
+        <input type="radio" id="fire2" name="rank2" value="fire">
         <label for="fire2">Fire</label><br>
-        <input type="radio" id="grass2" name="second" value="grass">
+        <input type="radio" id="grass2" name="rank2" value="grass">
         <label for="grass2">Grass</label><br>
-        <input type="radio" id="water2" name="second" value="water">
+        <input type="radio" id="water2" name="rank2" value="water">
         <label for="water2">Water</label><br>
 
         <p>Third choice for splatfest Team:</p>
-        <input type="radio" id="fire3" name="third" value="fire">
+        <input type="radio" id="fire3" name="rank3" value="fire">
         <label for="fire3">Fire</label><br>
-        <input type="radio" id="grass3" name="third" value="grass">
+        <input type="radio" id="grass3" name="rank3" value="grass">
         <label for="grass3">Grass</label><br>
-        <input type="radio" id="water3" name="third" value="water">
+        <input type="radio" id="water3" name="rank3" value="water">
         <label for="water3">Water</label><br><br>
 
         <input type="text" name="name" id="name">
@@ -62,7 +62,7 @@
                         <%= votes[i].name%>
                     </td>
                     <td>
-                        <%= votes[i].rank1%>
+                        <%= votes[i].rank1 %>
                     </td>
                     <td>
                         <%= votes[i].rank2%>
@@ -75,7 +75,7 @@
         </table>
     </section>
 
-    <script src="/js/script.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>

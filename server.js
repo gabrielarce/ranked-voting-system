@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
+const path = require("path");
 const PORT = process.env.PORT || 9999;
-const Vote = require("./models/Vote");
+const connectDB = require('./config/database');
+const Vote = require("./models/Votes");
 require("dotenv").config();
 
 connectDB();
@@ -14,10 +16,25 @@ app.use(express.json())
 
 //ROUTES
 app.get("/", async(req, res) => {
-    const vote = await Vote.find({})
-    res.render('index', { vote })
+    const votes = await Vote.find({})
+    console.log(votes)
+    res.render('index', { votes })
+})
+
+app.post("/vote", async(req, res) => {
+    try {
+        await Vote.create({
+            name: req.body.name,
+            rank1: req.body.rank1,
+            rank2: req.body.rank2,
+            rank3: req.body.rank3
+        })
+        res.redirect("/")
+    } catch (error) {
+        console.log(error)
+    }
 })
 
 app.listen(PORT, () => {
-    console.log('listening on port 9000')
+    console.log('listening on port 9999')
 })

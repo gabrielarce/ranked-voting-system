@@ -1,4 +1,4 @@
-var radios = document.forms["frm1"].elements["first"];
+var radios = document.forms["frm1"].elements["rank1"];
 for (radio in radios) {
     radios[radio].onclick = function() {
         let inputs = document.querySelectorAll("input")
@@ -12,7 +12,7 @@ for (radio in radios) {
     }
 }
 
-var radios2 = document.forms["frm1"].elements["second"];
+var radios2 = document.forms["frm1"].elements["rank2"];
 for (radio in radios2) {
     radios2[radio].onclick = function() {
         let type = event.target.value

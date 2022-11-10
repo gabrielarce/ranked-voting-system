@@ -5,15 +5,15 @@ const VoteSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    choice1: {
+    rank1: {
         type: String,
         required: true,
     },
-    choice2: {
+    rank2: {
         type: String,
         required: true,
     },
-    choice3: {
+    rank3: {
         type: String,
         required: true,
     },
