@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 9999;
+const Vote = require("./models/Vote");
 require("dotenv").config();
 
 connectDB();
@@ -12,8 +13,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
 
 //ROUTES
-app.get("/", (request, response) => {
-    response.render('index')
+app.get("/", async(req, res) => {
+    const vote = await Vote.find({})
+    res.render('index', { vote })
 })
 
 app.listen(PORT, () => {
