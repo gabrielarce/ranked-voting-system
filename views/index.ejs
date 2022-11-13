@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -8,44 +8,53 @@
     <title>Ranked Voting</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Lato&display=swap" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/d111aaec94.js" crossorigin="anonymous"></script>
+    <title>Ranked Choice</title>
 </head>
 
 <body>
-    <h1>Splatfest Ranked Choice voting</h1>
+    <div class="header">
+        <h1>Splatfest Ranked Choice voting</h1>
+    </div>
 
-    <form id="frm1" name="frm1" method="POST" action="/vote">
-        <p>First choice for SplateFest Team:</p>
-        <input type="radio" id="fire1" name="rank1" value="fire">
-        <label for="fire1">Fire</label><br>
-        <input type="radio" id="grass1" name="rank1" value="grass">
-        <label for="grass1">Grass</label><br>
-        <input type="radio" id="water1" name="rank1" value="water">
-        <label for="water1">Water</label><br>
+    <section class="form-section">
+        <form id="frm1" name="frm1" method="POST" action="/vote">
+            <p>First choice for SplateFest Team:</p>
+            <input type="radio" id="fire1" name="rank1" value="fire">
+            <label for="fire1">Fire  <i class="fa fa-fire "></i></label><br>
+            <input type="radio" id="grass1" name="rank1" value="grass">
+            <label for="grass1">Grass <i class="fa-solid fa-leaf"></i></label><br>
+            <input type="radio" id="water1" name="rank1" value="water">
+            <label for="water1">Water <i class="fa-solid fa-droplet"></i></label><br>
 
 
-        <p>Second choice for splatfest Team:</p>
-        <input type="radio" id="fire2" name="rank2" value="fire">
-        <label for="fire2">Fire</label><br>
-        <input type="radio" id="grass2" name="rank2" value="grass">
-        <label for="grass2">Grass</label><br>
-        <input type="radio" id="water2" name="rank2" value="water">
-        <label for="water2">Water</label><br>
+            <p>Second choice for splatfest Team:</p>
+            <input type="radio" id="fire2" name="rank2" value="fire">
+            <label for="fire2">Fire</label><br>
+            <input type="radio" id="grass2" name="rank2" value="grass">
+            <label for="grass2">Grass</label><br>
+            <input type="radio" id="water2" name="rank2" value="water">
+            <label for="water2">Water</label><br>
 
-        <p>Third choice for splatfest Team:</p>
-        <input type="radio" id="fire3" name="rank3" value="fire">
-        <label for="fire3">Fire</label><br>
-        <input type="radio" id="grass3" name="rank3" value="grass">
-        <label for="grass3">Grass</label><br>
-        <input type="radio" id="water3" name="rank3" value="water">
-        <label for="water3">Water</label><br><br>
+            <p>Third choice for splatfest Team:</p>
+            <input type="radio" id="fire3" name="rank3" value="fire">
+            <label for="fire3">Fire</label><br>
+            <input type="radio" id="grass3" name="rank3" value="grass">
+            <label for="grass3">Grass</label><br>
+            <input type="radio" id="water3" name="rank3" value="water">
+            <label for="water3">Water</label><br><br>
 
-        <input type="text" name="name" id="name">
-        <label for="name">Enter Your Name</label><br>
+            <input type="text" name="name" id="name">
+            <label for="name">Enter Your Name</label><br>
 
-        <input type="button" onclick="resetForm()" value="Reset">
-        <input type="submit" value="Submit">
-    </form>
+            <input type="button" onclick="resetForm()" value="Reset">
+            <input type="submit" value="Submit">
+        </form>
+    </section>
 
     <section>
         <h3>Vote Results</h3>
@@ -75,6 +84,9 @@
         </table>
     </section>
 
+    <section>
+        <p></p>
+    </section>
     <script src="/js/main.js"></script>
 </body>
 

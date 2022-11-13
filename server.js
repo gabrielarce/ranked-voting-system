@@ -18,6 +18,16 @@ app.use(express.json())
 app.get("/", async(req, res) => {
     const votes = await Vote.find({})
     console.log(votes)
+        // const fire = await Vote.find({ rank1: "fire" })
+        // const water = await Vote.find({ rank1: "water" })
+        // const grass = await Vote.find({ rank1: "grass" })
+        // const candidates = {
+        //     fire: 0,
+        //     grass: 0,
+        //     water: 0,
+        // }
+        // console.log(votes)
+        // console.log(`fire votes: ${fire.length}`, `water votes: ${water.length}`, `grass votes: ${grass.length}`, `total votes: ${votes.length}`)
     res.render('index', { votes })
 })
 
@@ -38,3 +48,17 @@ app.post("/vote", async(req, res) => {
 app.listen(PORT, () => {
     console.log('listening on port 9999')
 })
+
+function calculateMost(votes) {
+    let choices = 3
+    const candidates = {
+        fire: 0,
+        grass: 0,
+        water: 0,
+    }
+    for (i = 0; i < votes.length; i++) {
+        let rank1 = votes[i].rank1
+        candidates[rank1] += 1
+    }
+    return candidates
+}

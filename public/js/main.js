@@ -1,16 +1,35 @@
-var radios = document.forms["frm1"].elements["rank1"];
-for (radio in radios) {
-    radios[radio].onclick = function() {
-        let inputs = document.querySelectorAll("input")
-        let inputsArray = [...document.querySelectorAll("input")]
-        inputsArray.forEach(input => {
+let radio1 = document.forms["frm1"].elements["rank1"];
+let inputs = [...document.querySelectorAll('input[type="radio"]')]
+let labels = [...document.querySelectorAll('input[name="rank1"] + label')]
+    // for (radio in radios) {
+    //     let inputsArray = [...document.querySelectorAll('input[type="radio"]')]
+    //     let labelsArray = [...document.querySelectorAll('input[name="rank1"] + label')]
+    //     radios[radio].onclick = function() {
+    //         console.log(inputsArray, labelsArray)
+    //         inputsArray.forEach(input => {
+    //             input.disabled = false
+    //         })
+
+//         let type = event.target.value
+//         document.getElementById(type + "2").disabled = true
+//         document.getElementById(type + "3").disabled = true
+//     }
+// }
+
+radio1.forEach(radio => {
+    radio.addEventListener("click", function() {
+        console.log(this.id, radio, inputs, labels)
+        inputs.forEach(input => {
             input.disabled = false
         })
+
         let type = event.target.value
         document.getElementById(type + "2").disabled = true
         document.getElementById(type + "3").disabled = true
-    }
-}
+        document.querySelector(`#${this.id} + label`).classList.toggle("red")
+
+    })
+})
 
 var radios2 = document.forms["frm1"].elements["rank2"];
 for (radio in radios2) {
