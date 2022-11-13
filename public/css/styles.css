@@ -195,3 +195,15 @@ h5 h6 {
     background-color: #04AA6D;
     color: white;
 }
+
+.fa-fire::before {
+    color: red
+}
+
+.fa-leaf::before {
+    color: forestgreen
+}
+
+.fa-droplet::before {
+    color: deepskyblue
+}
