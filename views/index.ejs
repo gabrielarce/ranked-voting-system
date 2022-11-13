@@ -25,7 +25,7 @@
         <form id="frm1" name="frm1" method="POST" action="/vote">
             <p>First choice for SplateFest Team:</p>
             <input type="radio" id="fire1" name="rank1" value="fire">
-            <label for="fire1">Fire  <i class="fa fa-fire "></i></label><br>
+            <label for="fire1">Fire <i class="fa fa-fire "></i></label><br>
             <input type="radio" id="grass1" name="rank1" value="grass">
             <label for="grass1">Grass <i class="fa-solid fa-leaf"></i></label><br>
             <input type="radio" id="water1" name="rank1" value="water">
@@ -34,31 +34,31 @@
 
             <p>Second choice for splatfest Team:</p>
             <input type="radio" id="fire2" name="rank2" value="fire">
-            <label for="fire2">Fire</label><br>
+            <label for="fire2">Fire <i class="fa fa-fire "></i></label><br>
             <input type="radio" id="grass2" name="rank2" value="grass">
-            <label for="grass2">Grass</label><br>
+            <label for="grass2">Grass <i class="fa-solid fa-leaf"></i></label><br>
             <input type="radio" id="water2" name="rank2" value="water">
-            <label for="water2">Water</label><br>
+            <label for="water2">Water <i class="fa-solid fa-droplet"></i></label></label><br>
 
             <p>Third choice for splatfest Team:</p>
             <input type="radio" id="fire3" name="rank3" value="fire">
-            <label for="fire3">Fire</label><br>
+            <label for="fire3">Fire <i class="fa fa-fire "></i></label><br>
             <input type="radio" id="grass3" name="rank3" value="grass">
-            <label for="grass3">Grass</label><br>
+            <label for="grass3">Grass <i class="fa-solid fa-leaf"></i></label><br>
             <input type="radio" id="water3" name="rank3" value="water">
-            <label for="water3">Water</label><br><br>
+            <label for="water3">Water <i class="fa-solid fa-droplet"></i></label></label><br><br>
 
             <input type="text" name="name" id="name">
             <label for="name">Enter Your Name</label><br>
 
             <input type="button" onclick="resetForm()" value="Reset">
-            <input type="submit" value="Submit">
+            <input id="submit" type="submit" value="Submit">
         </form>
     </section>
 
     <section>
         <h3>Vote Results</h3>
-        <table>
+        <table id="results">
             <tr>
                 <th>Name</th>
                 <th>First Choice</th>

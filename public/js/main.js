@@ -1,20 +1,6 @@
 let radio1 = document.forms["frm1"].elements["rank1"];
 let inputs = [...document.querySelectorAll('input[type="radio"]')]
 let labels = [...document.querySelectorAll('input[name="rank1"] + label')]
-    // for (radio in radios) {
-    //     let inputsArray = [...document.querySelectorAll('input[type="radio"]')]
-    //     let labelsArray = [...document.querySelectorAll('input[name="rank1"] + label')]
-    //     radios[radio].onclick = function() {
-    //         console.log(inputsArray, labelsArray)
-    //         inputsArray.forEach(input => {
-    //             input.disabled = false
-    //         })
-
-//         let type = event.target.value
-//         document.getElementById(type + "2").disabled = true
-//         document.getElementById(type + "3").disabled = true
-//     }
-// }
 
 radio1.forEach(radio => {
     radio.addEventListener("click", function() {
@@ -41,10 +27,10 @@ for (radio in radios2) {
 
 //Reset Form Button
 function resetForm() {
-    let inputs = document.querySelectorAll("input")
+    let inputs = document.querySelectorAll('input[type="radio"]')
     let inputsArray = [...inputs]
     inputsArray.forEach(input => {
         input.disabled = false
     })
-    document.getElementById("frm1").reset();
+    document.getElementById("frm1").reset()
 }
