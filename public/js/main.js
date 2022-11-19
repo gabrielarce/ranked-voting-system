@@ -3,7 +3,9 @@ let inputs = [...document.querySelectorAll('input[type="radio"]')]
 let labels = [...document.querySelectorAll('input[name="rank1"] + label')]
 
 function displayWinner() {
-    document.querySelector(".winner").style.display = "block"
+    let winner = document.querySelector(".winner");
+    winner.style.display = "block";
+    winner.scrollIntoView();
 }
 
 radio1.forEach(radio => {
