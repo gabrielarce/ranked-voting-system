@@ -18,16 +18,6 @@ app.use(express.json())
 app.get("/", async(req, res) => {
     const votes = await Vote.find({})
     console.log(votes)
-        // const fire = await Vote.find({ rank1: "fire" })
-        // const water = await Vote.find({ rank1: "water" })
-        // const grass = await Vote.find({ rank1: "grass" })
-        // const candidates = {
-        //     fire: 0,
-        //     grass: 0,
-        //     water: 0,
-        // }
-        // console.log(votes)
-        // console.log(`fire votes: ${fire.length}`, `water votes: ${water.length}`, `grass votes: ${grass.length}`, `total votes: ${votes.length}`)
     res.render('index', { votes })
 })
 
