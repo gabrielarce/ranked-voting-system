@@ -84,8 +84,11 @@
         </table>
     </section>
 
-    <section>
-        <p></p>
+    <section class="winner">
+        <p>
+            <span class="winner--name"><%= JSON.stringify(Object.keys(winner)[0]).replace(/['"]+/g, '') %></span> is the winner with a total winning tally of
+            <span class="winner--count"><%= JSON.stringify(Object.values(winner)[0]).replace(/['"]+/g, '') %></span> top votes out of <span class="votes--count"><%= votes.length%></span>
+        </p>
     </section>
     <script src="/js/main.js"></script>
 </body>

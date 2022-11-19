@@ -196,6 +196,13 @@ h5 h6 {
     color: white;
 }
 
+.winner--name {
+    text-transform: capitalize;
+}
+
+
+/* Colors */
+
 .fa-fire::before {
     color: red
 }
