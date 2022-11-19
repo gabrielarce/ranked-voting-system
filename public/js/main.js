@@ -2,6 +2,10 @@ let radio1 = document.forms["frm1"].elements["rank1"];
 let inputs = [...document.querySelectorAll('input[type="radio"]')]
 let labels = [...document.querySelectorAll('input[name="rank1"] + label')]
 
+function displayWinner() {
+    document.querySelector(".winner").style.display = "block"
+}
+
 radio1.forEach(radio => {
     radio.addEventListener("click", function() {
         console.log(this.id, radio, inputs, labels)
