@@ -62,7 +62,7 @@ function calculateMost(votes) {
         }
     }
 
-    let low = [...Object.values(candidates)].sort((a, b) => a > b)[0]
+    let low = [...Object.values(candidates)].sort((a, b) => a - b)[0]
 
     for (const key in candidates) {
         if (candidates[key] == low) {
