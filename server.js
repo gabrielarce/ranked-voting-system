@@ -21,6 +21,10 @@ app.get("/", async(req, res) => {
     res.render('index', { votes, winner })
 })
 
+app.get("/createform", (req, res) => {
+    res.render("newElection")
+})
+
 app.post("/vote", async(req, res) => {
     try {
         await Vote.create({
