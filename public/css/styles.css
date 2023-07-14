@@ -326,8 +326,8 @@ h5 h6 {
 
 /* Colors */
 
-.fa-fire::before {
-    color: red
+.fa-candy-bar::before {
+    color: rgb(242, 14, 14)
 }
 
 .fa-leaf::before {
@@ -336,4 +336,9 @@ h5 h6 {
 
 .fa-droplet::before {
     color: deepskyblue
+}
+
+img {
+    width: 30px;
+    height: 30px;
 }

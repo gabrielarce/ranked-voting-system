@@ -3,16 +3,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Ranked Voting</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Lato&display=swap" rel="stylesheet">
-    <link href="/css/styles.css" rel="stylesheet" type="text/css">
-    <script src="https://kit.fontawesome.com/d111aaec94.js" crossorigin="anonymous"></script>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Lato&display=swap" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/d111aaec94.js" crossorigin="anonymous" async defer></script>
     <title>Ranked Choice</title>
 </head>
 
@@ -24,35 +24,38 @@
     <section class="form-section">
         <form id="frm1" name="frm1" method="POST" action="/vote">
             <p>First choice for SplateFest Team:</p>
-            <input type="radio" id="fire1" name="rank1" value="fire" required>
-            <label for="fire1">Fire <i class="fa fa-fire "></i></label><br>
-            <input type="radio" id="grass1" name="rank1" value="grass" required>
-            <label for="grass1">Grass <i class="fa-solid fa-leaf"></i></label><br>
-            <input type="radio" id="water1" name="rank1" value="water" required>
-            <label for="water1">Water <i class="fa-solid fa-droplet"></i></label><br>
+            <input type="radio" id="strawberry1" name="rank1" value="strawberry" required />
+            <label for="fire1">Strawberry &#127827</label><br />
+            <input type="radio" id="mint1" name="rank1" value="mint" required />
+            <label for="grass1">Mint 🌿</label><br />
+            <input type="radio" id="vanilla1" name="rank1" value="vanilla" required />
+            <label for="water1">Vanilla 🍨</i></label
+        ><br />
 
+        <p>Second choice for splatfest Team:</p>
+        <input type="radio" id="strawberry2" name="rank2" value="strawberry" required />
+        <label for="fire2">Strawberry &#127827</label><br />
+            <input type="radio" id="mint2" name="rank2" value="mint" required />
+            <label for="grass2">Mint🌿</label><br />
+            <input type="radio" id="vanilla2" name="rank2" value="vanilla" required />
+            <label for="water2">Vanilla 🍨</label
+        ><br />
 
-            <p>Second choice for splatfest Team:</p>
-            <input type="radio" id="fire2" name="rank2" value="fire" required>
-            <label for="fire2">Fire <i class="fa fa-fire "></i></label><br>
-            <input type="radio" id="grass2" name="rank2" value="grass" required>
-            <label for="grass2">Grass <i class="fa-solid fa-leaf"></i></label><br>
-            <input type="radio" id="water2" name="rank2" value="water" required>
-            <label for="water2">Water <i class="fa-solid fa-droplet"></i></label></label><br>
+        <p>Third choice for splatfest Team:</p>
+        <input type="radio" id="strawberry3" name="rank3" value="strawberry" required />
+        <label for="fire3">Strawberry &#127827</label
+        ><br />
+        <input type="radio" id="mint3" name="rank3" value="mint" required />
+        <label for="grass3">Mint 🌿</label><br />
+            <input type="radio" id="water3" name="rank3" value="vanilla" required />
+            <label for="vanilla3">Vanilla 🍨</label
+        ><br />
 
-            <p>Third choice for splatfest Team:</p>
-            <input type="radio" id="fire3" name="rank3" value="fire" required>
-            <label for="fire3">Fire <i class="fa fa-fire "></i></label><br>
-            <input type="radio" id="grass3" name="rank3" value="grass" required>
-            <label for="grass3">Grass <i class="fa-solid fa-leaf"></i></label><br>
-            <input type="radio" id="water3" name="rank3" value="water" required>
-            <label for="water3">Water <i class="fa-solid fa-droplet"></i></label></label><br><br>
+        <input type="text" name="name" id="name" required />
+        <label for="name">Enter Your Name</label><br />
 
-            <input type="text" name="name" id="name" required>
-            <label for="name">Enter Your Name</label><br>
-
-            <input class="button-1" type="button" onclick="resetForm()" value="Reset">
-            <input class="button-3" id="submit" type="submit" value="Submit">
+            <input class="button-1" type="button" onclick="resetForm()" value="Reset" />
+            <input class="button-3" id="submit" type="submit" value="Submit" />
         </form>
     </section>
 
@@ -84,17 +87,29 @@
         </table>
     </section>
 
-    <button id="displayWinner" class="button-85" onclick="displayWinner()">Calculate Winner</button>
+    <button id="displayWinner" class="button-85" onclick="displayWinner()">
+      Calculate Winner
+    </button>
     <section class="winner">
-
-        <p class="rainbow-box">
-            <span class="winner--name"><%= JSON.stringify(Object.keys(winner)[0]).replace(/['"]+/g, '') %></span> is the winner with a total winning tally of
-            <span class="winner--count"><%= JSON.stringify(Object.values(winner)[0]).replace(/['"]+/g, '') %></span> top votes out of <span class="votes--count"><%= votes.length%></span> votes.
-        </p>
+        <div>
+            <p class="rainbow-box">
+                <span class="winner--name"><%= JSON.stringify(Object.keys(winner)[0]).replace(/['"]+/g, '')
+        %></span
+      >
+      is the winner with a total winning tally of
+      <span class="winner--count"
+        ><%= JSON.stringify(Object.values(winner)[0]).replace(/['"]+/g, '')
+        %></span
+      >
+      top votes out of
+      <span class="votes--count"><%= votes.length%></span> votes.
+            </p>
+        </div>
         <h2>How Does Ranked Choice Voting Work?</h2>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/oHRPMJmzBBw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
     <script src="/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/regular.min.js" integrity="sha512-RNA9D6w1BGWFIVSGkGBsEEgVxoGNu7mtLZ+QQvwvoZHJHyoK19FF5R4xeM4AmdzreiwRzu8r0Xs89kFrOPh2zw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
